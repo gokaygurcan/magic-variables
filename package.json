@@ -1,0 +1,39 @@
+{
+  "name": "magic-variables",
+  "version": "0.1.0",
+  "description": "Magic variables for Node.js",
+  "main": "magic-variables.js",
+  "homepage": "https://github.com/gokaygurcan/magic-variables",
+  "scripts": {
+    "preinstall": "node -e 'process.exit(0)'",
+    "test": "mocha test/tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gokaygurcan/magic-variables.git"
+  },
+  "keywords": [
+    "helper",
+    "constants",
+    "magic",
+    "variables"
+  ],
+  "author": {
+    "name": "Gökay Gürcan",
+    "email": "gokaygurcan@gmail.com",
+    "url": "http://www.gokaygurcan.com"
+  },
+  "contributors": [],
+  "copyright": "2015",
+  "license": {
+    "type": "MIT",
+    "url": "https://raw.githubusercontent.com/gokaygurcan/magic-variables/master/LICENSE"
+  },
+  "bugs": {
+    "url": "https://github.com/gokaygurcan/magic-variables/issues"
+  },
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "mocha": "^2.2.5"
+  }
+}
