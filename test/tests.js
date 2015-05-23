@@ -1,6 +1,6 @@
 /*!
  *    ---------------   ------  
- *  | Magic Variables | v0.2.0 |
+ *  | Magic Variables | v0.3.0 |
  *    ---------------   ------  
  */
 
@@ -13,6 +13,12 @@ describe('Paths:', function() {
       expect(require(__magic.package).version).to.equal(require('../package.json').version);
     });
   });
+
+  describe('__magic.base', function() {
+    it('should return root path', function() {
+      expect(__magic.base).to.equal(process.cwd());
+    });
+  });  
 });
 
 describe('Names:', function() {

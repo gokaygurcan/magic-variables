@@ -24,7 +24,9 @@ require('magic-variables');
 var packageJSON = __magic.package;
 console.log(packageJSON); // => /Users/gokaygurcan/Projects/magic-variables/package.json
 // or
-console.log(require(__magic.package).version); // => 0.2.0
+console.log(require(__magic.package).version); // => 0.3.0
+
+console.log(__magic.base); // => /Users/gokaygurcan/Projects/magic-variables/
 
 console.log(__magic.filename); // => magic-variables.js
 ```
@@ -33,7 +35,6 @@ console.log(__magic.filename); // => magic-variables.js
 
 Planned features: 
 ```javascript
-__magic.base      // => /Users/gokaygurcan/Projects/magic-variables/
 __magic.file      // => /Users/gokaygurcan/Projects/magic-variables/magic-variables.js
 __magic.extension // => js 
 __magic.line      // => 42

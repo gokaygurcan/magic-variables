@@ -1,6 +1,6 @@
 /*!
  *    ---------------   ------  
- *  | Magic Variables | v0.2.0 |
+ *  | Magic Variables | v0.3.0 |
  *    ---------------   ------  
  */
 
@@ -15,7 +15,19 @@ var __magic = {};
 Object.defineProperty(__magic, 'package', {
   __proto__: null,
   get: function() {
-    return process.cwd() + '/package.json'; 
+    return process.cwd() + '/package.json';
+  }
+});
+
+/*!
+ *  __magic.base
+ *
+ *  Returns root path
+ */
+Object.defineProperty(__magic, 'base', {
+  __proto__: null,
+  get: function() {
+    return process.cwd();
   }
 });
 
