@@ -1,6 +1,6 @@
 /*!
  *    ---------------   ------  
- *  | Magic Variables | v0.3.0 |
+ *  | Magic Variables | v0.4.0 |
  *    ---------------   ------  
  */
 
@@ -64,6 +64,18 @@ Object.defineProperty(__magic, 'filename', {
   __proto__: null,
   get: function() {
     return this.stack[1].getFileName().split('/').slice(-1)[0];
+  }
+});
+
+/*!
+ *  __magic.file
+ *
+ *  Returns file path 
+ */
+Object.defineProperty(__magic, 'file', {
+  __proto__: null,
+  get: function() {
+    return this.stack[1].getFileName();
   }
 });
 

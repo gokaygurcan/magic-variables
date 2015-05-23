@@ -22,20 +22,21 @@ Simply add this to your top-most file, something like bootloader. No need to ass
 require('magic-variables');
 
 var packageJSON = __magic.package;
-console.log(packageJSON); // => /Users/gokaygurcan/Projects/magic-variables/package.json
+console.log(packageJSON);      // => /Users/gokaygurcan/Projects/magic-variables/package.json
 // or
-console.log(require(__magic.package).version); // => 0.3.0
+console.log(require(__magic.package).version); // => 0.4.0
 
-console.log(__magic.base); // => /Users/gokaygurcan/Projects/magic-variables/
+console.log(__magic.base);     // => /Users/gokaygurcan/Projects/magic-variables/
 
 console.log(__magic.filename); // => magic-variables.js
+
+console.log(__magic.file);     // => /Users/gokaygurcan/Projects/magic-variables/magic-variables.js
 ```
 
 ## TODO
 
 Planned features: 
 ```javascript
-__magic.file      // => /Users/gokaygurcan/Projects/magic-variables/magic-variables.js
 __magic.extension // => js 
 __magic.line      // => 42
 __magic.column    // => 7

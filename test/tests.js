@@ -1,6 +1,6 @@
 /*!
  *    ---------------   ------  
- *  | Magic Variables | v0.3.0 |
+ *  | Magic Variables | v0.4.0 |
  *    ---------------   ------  
  */
 
@@ -18,7 +18,13 @@ describe('Paths:', function() {
     it('should return root path', function() {
       expect(__magic.base).to.equal(process.cwd());
     });
-  });  
+  });
+
+  describe('__magic.file', function() {
+    it('should return file path', function() {
+      expect(__magic.file).to.equal(module.filename);
+    });
+  });
 });
 
 describe('Names:', function() {
