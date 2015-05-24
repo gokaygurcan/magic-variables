@@ -1,6 +1,6 @@
 /*!
  *    ---------------   ------  
- *  | Magic Variables | v0.5.0 |
+ *  | Magic Variables | v0.6.0 |
  *    ---------------   ------  
  */
 
@@ -88,6 +88,18 @@ Object.defineProperty(__magic, 'extension', {
   __proto__: null,
   get: function() {
     return this.stack[1].getFileName().split('.').slice(-1)[0];
+  }
+});
+
+/*!
+ *  __magic.line
+ *
+ *  Returns line number
+ */
+Object.defineProperty(__magic, 'line', {
+  __proto__: null,
+  get: function() {
+    return this.stack[1].getLineNumber();
   }
 });
 

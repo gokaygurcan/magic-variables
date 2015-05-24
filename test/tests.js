@@ -1,6 +1,6 @@
 /*!
  *    ---------------   ------  
- *  | Magic Variables | v0.5.0 |
+ *  | Magic Variables | v0.6.0 |
  *    ---------------   ------  
  */
 
@@ -39,6 +39,12 @@ describe('Values:', function() {
   describe('__magic.extension', function() {
     it('should return file extension', function() {
       expect(__magic.extension).to.equal(module.filename.split('.').slice(-1)[0]);
+    });
+  });
+
+  describe('__magic.line', function() {
+    it('should return line number', function() {
+      expect(__magic.line).to.equal(47); // the current line
     });
   });
 });
