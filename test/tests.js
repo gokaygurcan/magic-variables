@@ -1,6 +1,6 @@
 /*!
  *    ---------------   ------  
- *  | Magic Variables | v0.8.0 |
+ *  | Magic Variables | v0.9.0 |
  *    ---------------   ------  
  */
 
@@ -61,7 +61,19 @@ describe('Values:', function() {
 
   describe('__magic.column', function() {
     it('should return column number', function() {
+      // ----.
+      //     |  where column number points
+      //     V
       expect(__magic.column).to.equal(14); // the current column
+    });
+  });
+
+  describe('__magic.info', function() {
+    it('should return info, file:line:column', function() {
+      // ----.
+      //     |  where column number points
+      //     V
+      expect(__magic.info).to.equal(module.filename+':76:14');
     });
   });
 });

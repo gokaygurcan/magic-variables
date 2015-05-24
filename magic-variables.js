@@ -1,6 +1,6 @@
 /*!
  *    ---------------   ------  
- *  | Magic Variables | v0.8.0 |
+ *  | Magic Variables | v0.9.0 |
  *    ---------------   ------  
  */
 
@@ -116,6 +116,18 @@ Object.defineProperty(__magic, 'column', {
 });
 
 /*!
+ *  __magic.info
+ *
+ *  Returns info, file : line : column
+ */
+Object.defineProperty(__magic, 'info', {
+  __proto__: null,
+  get: function() {
+    return this.stack[1].getFileName() +':'+ this.stack[1].getLineNumber() +':'+ (this.stack[1].getColumnNumber() - '__magic.'.length+1);
+  }
+});
+
+/*!
  *  __magic.function
  *
  *  Returns function name or (anonymous)
@@ -123,6 +135,8 @@ Object.defineProperty(__magic, 'column', {
 Object.defineProperty(__magic, 'function', {
   __proto__: null,
   get: function() {
+    /* alternative solution: https://gist.github.com/lordvlad/ec81834ddff73aaa1ab0
+       return arguments.callee.caller && arguments.callee.caller.name || '(anonymous)'; */
     return this.stack[1].getFunctionName() || '(anonymous)';
   }
 });

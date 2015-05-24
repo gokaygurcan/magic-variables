@@ -23,7 +23,7 @@ require('magic-variables');
 
 console.log(__magic.package);   // => /Users/gokaygurcan/Projects/magic-variables/package.json
 // or
-console.log(require(__magic.package).version); // => 0.8.0
+console.log(require(__magic.package).version); // => 0.9.0
 
 console.log(__magic.base);      // => /Users/gokaygurcan/Projects/magic-variables/
 
@@ -37,6 +37,8 @@ console.log(__magic.line);      // => 42
 
 console.log(__magic.column);    // => 7
 
+console.log(__magic.info);      // => /Users/gokaygurcan/Projects/magic-variables/magic-variables.js:42:7
+
 console.log(__magic.function);  // => (anonymous) || function_name
 ```
 
@@ -45,7 +47,7 @@ console.log(__magic.function);  // => (anonymous) || function_name
 Planned features: 
 ```javascript
 __magic.class     // => null || class_name
-__magic.info      // => /Users/gokaygurcan/Projects/magic-variables/magic-variables.js:42:7
+__magic.method    // => null || method_name
 ```
 
 On top of these ones, there's also another plan: putting a file at the root of the project named `.magicrc` and inside of it mapping variables with the desired directories or files. i.e: 
