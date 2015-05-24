@@ -23,7 +23,7 @@ require('magic-variables');
 
 console.log(__magic.package);   // => /Users/gokaygurcan/Projects/magic-variables/package.json
 // or
-console.log(require(__magic.package).version); // => 0.7.0
+console.log(require(__magic.package).version); // => 0.8.0
 
 console.log(__magic.base);      // => /Users/gokaygurcan/Projects/magic-variables/
 
@@ -36,13 +36,14 @@ console.log(__magic.extension); // => js
 console.log(__magic.line);      // => 42
 
 console.log(__magic.column);    // => 7
+
+console.log(__magic.function);  // => (anonymous) || function_name
 ```
 
 ## TODO
 
 Planned features: 
 ```javascript
-__magic.function  // => (anonymous) || function_name
 __magic.class     // => null || class_name
 __magic.info      // => /Users/gokaygurcan/Projects/magic-variables/magic-variables.js:42:7
 ```

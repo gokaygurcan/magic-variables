@@ -1,6 +1,6 @@
 /*!
  *    ---------------   ------  
- *  | Magic Variables | v0.7.0 |
+ *  | Magic Variables | v0.8.0 |
  *    ---------------   ------  
  */
 
@@ -33,6 +33,17 @@ describe('Names:', function() {
       expect(__magic.filename).to.equal(module.filename.split('/').slice(-1)[0]);
     });
   });
+
+  describe('__magic.function', function() {
+    it('should return function name', function() {
+      expect(__magic.function).to.equal('(anonymous)');
+
+      function testFunction() {
+        expect(__magic.function).to.equal('testFunction');
+      }
+      testFunction();
+    });
+  });
 });
 
 describe('Values:', function() {
@@ -44,7 +55,7 @@ describe('Values:', function() {
 
   describe('__magic.line', function() {
     it('should return line number', function() {
-      expect(__magic.line).to.equal(47); // the current line
+      expect(__magic.line).to.equal(58); // the current line
     });
   });
 
