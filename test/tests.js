@@ -1,6 +1,6 @@
 /*!
  *    ---------------   ------  
- *  | Magic Variables | v0.6.0 |
+ *  | Magic Variables | v0.7.0 |
  *    ---------------   ------  
  */
 
@@ -45,6 +45,12 @@ describe('Values:', function() {
   describe('__magic.line', function() {
     it('should return line number', function() {
       expect(__magic.line).to.equal(47); // the current line
+    });
+  });
+
+  describe('__magic.column', function() {
+    it('should return column number', function() {
+      expect(__magic.column).to.equal(14); // the current column
     });
   });
 });

@@ -1,6 +1,6 @@
 /*!
  *    ---------------   ------  
- *  | Magic Variables | v0.6.0 |
+ *  | Magic Variables | v0.7.0 |
  *    ---------------   ------  
  */
 
@@ -100,6 +100,18 @@ Object.defineProperty(__magic, 'line', {
   __proto__: null,
   get: function() {
     return this.stack[1].getLineNumber();
+  }
+});
+
+/*!
+ *  __magic.column
+ *
+ *  Returns column number
+ */
+Object.defineProperty(__magic, 'column', {
+  __proto__: null,
+  get: function() {
+    return this.stack[1].getColumnNumber() - '__magic.'.length+1;
   }
 });
 
