@@ -1,10 +1,10 @@
 /*!
  *    ---------------   ------  
- *  | Magic Variables | v0.9.0 |
+ *  | Magic Variables | v0.10.0 |
  *    ---------------   ------  
  */
 
-require('../magic-variables'); // __magic is in use after this point
+require('../magic-variables'); // __magic is available after this point
 var expect = (typeof chai != 'undefined') ? chai.expect : require('chai').expect;
 
 describe('Paths:', function() {
@@ -64,7 +64,7 @@ describe('Values:', function() {
       // ----.
       //     |  where column number points
       //     V
-      expect(__magic.column).to.equal(14); // the current column
+      expect(__magic.column).to.equal(13); // the current column
     });
   });
 
@@ -73,7 +73,7 @@ describe('Values:', function() {
       // ----.
       //     |  where column number points
       //     V
-      expect(__magic.info).to.equal(module.filename+':76:14');
+      expect(__magic.info).to.equal(module.filename+':76:13');
     });
   });
 });

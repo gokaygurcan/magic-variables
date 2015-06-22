@@ -16,14 +16,16 @@ npm install --save magic-variables
 
 ## Usage
 
-Simply add this to your top-most file, something like bootloader. No need to assign it to a variable, it can be accessible globally. i.e:
+Simply add this to your top-most file, something like bootloader. No need to assign it to a variable, it can be accessible globally.
+
+Basic variables: 
 
 ```javascript
 require('magic-variables');
 
 console.log(__magic.package);   // => /Users/gokaygurcan/Projects/magic-variables/package.json
 // or
-console.log(require(__magic.package).version); // => 0.9.0
+console.log(require(__magic.package).version); // => 0.10.0
 
 console.log(__magic.base);      // => /Users/gokaygurcan/Projects/magic-variables/
 
@@ -33,13 +35,37 @@ console.log(__magic.file);      // => /Users/gokaygurcan/Projects/magic-variable
 
 console.log(__magic.extension); // => js
 
-console.log(__magic.line);      // => 42
+console.log(__magic.line);      // => 38
 
-console.log(__magic.column);    // => 7
+//          |  where column number points
+//          V
+console.log(__magic.column);    // => 13
 
-console.log(__magic.info);      // => /Users/gokaygurcan/Projects/magic-variables/magic-variables.js:42:7
+//          |
+//          V
+console.log(__magic.info);      // => /Users/gokaygurcan/Projects/magic-variables/magic-variables.js:46:13
 
 console.log(__magic.function);  // => (anonymous) || function_name
+```
+
+Mapping: 
+
+Create `.magicrc` file in your application root and put these lines in it:
+```JSON
+{
+  "api" : "routes/api",
+  "config" : "config.js",
+  "lib" : "lib/"
+}
+```
+**Note:** Do not use the reserved words: _package_, _base_, _filename_, _file_, _extension_, _line_, _column_, _info_ and _function_. Also, not _class_ or _method_ too which are reserved for planned features.
+
+```javascript
+console.log(__magic.api);    // => /Users/gokaygurcan/Projects/magic-variables/routes/api
+
+console.log(__magic.config); // => /Users/gokaygurcan/Projects/magic-variables/config.js
+
+console.log(__magic.lib);    // => /Users/gokaygurcan/Projects/magic-variables/lib/
 ```
 
 ## TODO
@@ -50,24 +76,12 @@ __magic.class     // => null || class_name
 __magic.method    // => null || method_name
 ```
 
-On top of these ones, there's also another plan: putting a file at the root of the project named `.magicrc` and inside of it mapping variables with the desired directories or files. i.e: 
-
-```javascript
-{
-  "api" : "routes/api",
-  "config" : "config.js",
-  ...
-}
-```
-
-and they will be accessible as `__magic.api` or `__magic.config`. 
-
 ## Contribution
 
 Any contributions are more than welcome!
 
 ## License
-Can be found here: [LICENSE](LICENSE)
+[MIT](LICENSE) © [Gökay Gürcan](http://www.gokaygurcan.com)
 
 [npm-image]: https://img.shields.io/npm/v/magic-variables.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/magic-variables
