@@ -2,6 +2,7 @@
 
 Magic variables for Node.js
 
+[![analytics][analytics-image]][analytics-url]
 [![npm version][npm-image]][npm-url]
 [![npm downloads][downloads-image]][downloads-url]
 [![travis ci][travis-image]][travis-url]
@@ -81,8 +82,10 @@ __magic.method    // => null || method_name
 Any contributions are more than welcome!
 
 ## License
-[MIT](LICENSE) © [Gökay Gürcan](http://www.gokaygurcan.com)
+MIT © [Gökay Gürcan](https://www.gokaygurcan.com)
 
+[analytics-image]: https://analytics.gokaygurcan.com/UA-53543274-4/gokaygurcan/magic-variables.svg?style=flat-square
+[analytics-url]: https://github.com/gokaygurcan/magic-variables
 [npm-image]: https://img.shields.io/npm/v/magic-variables.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/magic-variables
 [downloads-image]: https://img.shields.io/npm/dm/magic-variables.svg?style=flat-square
